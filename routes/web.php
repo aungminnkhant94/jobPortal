@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/jobs',[App\Http\Controllers\JobController::class,'index']);
 Route::get('/jobs/detail/{id}',[App\Http\Controllers\JobController::class,'detail']);
 
+Route::get('/companies/detail/{id}',[App\Http\Controllers\CompanyController::class,'detail'])->name('companies.detail');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

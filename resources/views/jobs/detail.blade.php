@@ -22,7 +22,7 @@
             <div class="card">
                 <div class="card-header">Short Info</div>
                 <div class="card-body">
-                    <p> Company: {{ $job->company->company_name }}</p>
+                    <p> Company: <a href="{{ route('companies.detail',[$job->company->id]) }}">{{ $job->company->company_name }}</a> </p>
                     <p> Address: {{ $job->address }} </p>
                     <p> Employment Type: {{ $job->type }} </p>
                     <p> Position: {{ $job->position }} </p>
