@@ -27,7 +27,9 @@
                         &nbsp;{{ $job->created_at->diffForHumans() }}
                     </td>
                     <td>
-                        <button class="btn btn-success btn-sm"> Apply </button>
+                        <a href="{{ url("/jobs/detail/$job->id") }}">
+                            <button class="btn btn-success btn-sm"> Apply </button>
+                        </a>
                     </td>
                 </tr>
             @endforeach

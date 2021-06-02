@@ -11,6 +11,12 @@ class JobController extends Controller
     public function index()
     {
         $jobs = Job::all();
-        return view('welcome',compact('jobs'));
+        return view('jobs.index',compact('jobs'));
+    }
+
+    public function detail($id)
+    {
+        $job = Job::find($id);
+        return view('jobs.detail',compact('job'));
     }
 }
