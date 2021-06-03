@@ -79,11 +79,11 @@
                         <div class="form-group-row">
                             <label for="gender" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="male">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="male"name="gender">
                                 <label class="form-check-label" for="inlineCheckbox1">Male</label>
                               </div>
                               <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="female">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="female"name="gender">
                                 <label class="form-check-label" for="inlineCheckbox2">Female</label>
                               </div>
                         </div>

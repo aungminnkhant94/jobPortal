@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/jobs',[App\Http\Controllers\JobController::class,'index']);
 Route::get('/jobs/detail/{id}',[App\Http\Controllers\JobController::class,'detail']);
+Route::get('/user/profile',[App\Http\Controllers\UserController::class,'index']);
+Route::post('/user/profile/store',[App\Http\Controllers\UserController::class,'store'])->name('profile.store');
 
 Route::get('/companies/detail/{id}',[App\Http\Controllers\CompanyController::class,'detail'])->name('companies.detail');
 
