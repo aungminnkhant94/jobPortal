@@ -40,14 +40,14 @@ class UserController extends Controller
         $user_id = auth()->user()->id;
         $validatedData = $request->validate([
             'address' => 'required' ,
-            'experience' => 'required | min:20' ,
-            'bio' => 'required | min:20',
-            'phone_number' => 'required | min:10 | numeric',
+            'experience' => 'required' ,
+            'bio' => 'required',
+            'phone_number' => 'required | numeric | min:10',
         ]);
 
-        if($validatedData->fails()) {
-            return back()->withErrors($validatedData);
-        }
+        //if($validatedData->fails()) {
+        //    return back()->withErrors($validatedData);
+        //}
 
         User::whereId($user_id) -> update($validatedData);
         return redirect('user/profile')->with('message','Profile Updated');

@@ -35,6 +35,7 @@
             <div class="col-md-5">
                 <div class="card">
                     <div class="card-header">Update Your Profile</div>
+
                     <form action="{{ route('profile.store') }}"method="POST"enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
@@ -83,6 +84,7 @@
                             </div>
                         </div>
                     </form>
+                    
                 </div>
             </div>
             <div class="col-md-4">

@@ -28,8 +28,8 @@ class UserFactory extends Factory
         return [
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail(),
-            'user_type' => 'seeker',
-            'gender' => $this->faker->name($gender),
+            'role_id' => rand(0,2),
+            'gender' => $this->faker->randomElement($array = array ('male', 'female')) ,
             'dob' => $this->faker->date,
             'phone_number' => $this->faker->phoneNumber,
             'email_verified_at' => now(),
